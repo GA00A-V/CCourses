@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react'
-import { createTheme } from '@mui/material'
+import { createTheme, responsiveFontSizes } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
@@ -13,6 +13,7 @@ const Home: NextPage = () => {
       }
     }
   })
+  theme = responsiveFontSizes(theme);
   return (
     <div style={{fontFamily:'"Roboto","Helvetica","Arial",sans-serif'}}>
       <ThemeProvider theme={theme}>
