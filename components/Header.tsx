@@ -23,7 +23,7 @@ const Header: NextPage = () => {
           <Button href='#newsletter' variant="contained" sx={{ml:1,borderRadius:'30px'}} color='primary' key={4}>JOIN US</Button>
         </Box>
       </Drawer>
-      <AppBar sx={{backgroundColor:'transparent', boxShadow:'none', position:'sticky'}}>
+      <AppBar sx={{backgroundColor:'transparent', boxShadow:'none', position:'absolute', top:'0'}}>
         <Container>
             <Toolbar sx={{justifyContent:"space-between"}}>
                 <div style={{display:'flex', alignItems:'center'}}>
@@ -43,7 +43,6 @@ const Header: NextPage = () => {
             </Toolbar>
         </Container>
       </AppBar>
-      <Toolbar/>
     </div>
   )
 }
