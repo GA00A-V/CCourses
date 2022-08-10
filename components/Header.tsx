@@ -9,11 +9,25 @@ const Header = () => {
   function toggleDrawer(){
     setOpen(!open);
   }
+  let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+  function isEmail(email:string){
+    return regex.test(email);
+  }
   function handleClose(){
     setSubscriptionOpen(!SubscriptOpen);
   }
+  function handleEmail(){
+    if (isEmail(email)){
+      fetch('/api/subscribe', {headers:{contentType:'application/json'}, body:JSON.stringify({email})});
+    }
+    else{
+      setError(true);
+    }
+  }
   let [open, setOpen] = useState(false);
   let [SubscriptOpen, setSubscriptionOpen] = useState(false);
+  let [email, setEmail] = useState('');
+  let [error, setError] = useState(false);
   return (
     <div>
       <Dialog open={SubscriptOpen}
@@ -32,11 +46,15 @@ const Header = () => {
             fullWidth
             variant="outlined"
             color='primary'
+            error={error}
+            onChange={(e)=>{setEmail(e.target.value)}}
+            value={email}
+            helperText={(error)?"email is not valid":''}
           />
       </DialogContent>
       <DialogActions sx={{marginBottom:'1em', marginRight:'1em'}}>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button variant='contained' onClick={handleClose}>Subscribe</Button>
+          <Button variant='contained' onClick={handleEmail}>Subscribe</Button>
         </DialogActions>
       </Dialog>
       <Drawer open={open} onClose={toggleDrawer}>

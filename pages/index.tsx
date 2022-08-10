@@ -8,7 +8,6 @@ import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import Course from '../components/course'
 import Pricing from '../components/Pricing'
-import { StaticImageData } from 'next/image'
 
 
 interface propType{
