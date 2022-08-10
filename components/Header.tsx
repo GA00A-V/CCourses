@@ -18,7 +18,9 @@ const Header = () => {
   }
   function handleEmail(){
     if (isEmail(email)){
-      fetch('/api/subscribe', {headers:{contentType:'application/json'}, body:JSON.stringify({email})});
+      fetch('/api/subscribe', {headers:{'Content-Type':'application/json'},method:'POST', body:JSON.stringify({email})});
+      handleClose();
+      setEmail('');
     }
     else{
       setError(true);

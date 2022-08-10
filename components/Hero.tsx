@@ -6,8 +6,23 @@ const Hero = () => {
     function handleClose(){
         setSubscriptionOpen(!SubscriptOpen);
     }
+    let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+    function isEmail(email:string){
+        return regex.test(email);
+    }
+    function handleEmail(){
+        if (isEmail(email)){
+          fetch('/api/subscribe', {headers:{'Content-Type':'application/json'},method:'POST', body:JSON.stringify({email})});
+          handleClose();
+          setEmail('');
+        }
+        else{
+          setError(true);
+        }
+      }
     let [SubscriptOpen, setSubscriptionOpen] = useState(false);
-
+    let [email, setEmail] = useState('');
+    let [error, setError] = useState(false);
     return (
         <div>
             <Dialog open={SubscriptOpen}
@@ -17,7 +32,7 @@ const Hero = () => {
                 <DialogContent>
                     <DialogContentText>
                         Subscribe to get notified every-time we upload new course.
-                    </DialogContentText>    
+                    </DialogContentText>
                     <TextField
                     sx={{marginTop:'1.6em'}}
                         autoFocus
@@ -26,11 +41,15 @@ const Hero = () => {
                         fullWidth
                         variant="outlined"
                         color='primary'
+                        error={error}
+                        onChange={(e)=>{setEmail(e.target.value)}}
+                        value={email}
+                        helperText={(error)?"email is not valid":''}
                     />
                 </DialogContent>
                 <DialogActions sx={{marginBottom:'1em', marginRight:'1em'}}>
                     <Button onClick={handleClose}>Cancel</Button>
-                    <Button variant='contained' onClick={handleClose}>Subscribe</Button>
+                    <Button variant='contained' onClick={handleEmail}>Subscribe</Button>
                 </DialogActions>
             </Dialog>
             <div className="hero">
