@@ -1,8 +1,7 @@
 import { Box, Button, Container, Typography } from "@mui/material"
-import { NextPage } from "next"
 import Image from "next/image";
 
-const Hero: NextPage = () => {
+const Hero = () => {
     return (
         <div className="hero">
             <div className="hero-overlay">
@@ -17,10 +16,10 @@ const Hero: NextPage = () => {
                         The most efficient and supportive way for you to learn in-demand skills, get hired, and advance your career.
                     </Typography>
                     <Box sx={{mt:{xs:"30px",md:"35px"}}}>
-                        <Button href="#newsletter" color="primary" variant="contained" sx={{borderRadius:'50px', mr:"8px"}}>
+                        <Button href="#newsletter" size="large" color="primary" variant="contained" sx={{borderRadius:'50px', mr:"8px"}}>
                             JOIN US
                         </Button>
-                        <Button href="#courses" color="primary" variant="outlined" sx={{borderRadius:'50px', ml:'8px'}}>
+                        <Button href="#courses"  size='large' color="primary" variant="outlined" sx={{borderRadius:'50px', ml:'8px'}}>
                             View Courses
                         </Button>
                     </Box>
