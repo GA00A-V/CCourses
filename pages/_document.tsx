@@ -8,6 +8,7 @@ export default function Document() {
                 rel="stylesheet"
                 href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
             />
+            <link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=191HsZUUJShlj8QTHvNB6EgFrs0QLMKkF" type="image/x-icon" />
         </Head>
       <body>
         <Main />

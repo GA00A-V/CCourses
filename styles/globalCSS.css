@@ -7,7 +7,7 @@
 
 
 .hero{
-    background-image: url('../public/hero640.jpg');
+    background-image: url('https://drive.google.com/uc?export=view&id=1iAaoeGxf2t6TVdxjgD0r3813_4t9pne5');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,11 +20,11 @@
 
 @media screen and (min-width: 640px) {
     .hero{
-        background-image: url('../public/hero1920.jpg');
+        background-image: url('https://drive.google.com/uc?export=view&id=1U4V9SVg7k1F1-eMRh_ts1zHPH9UbJIA2');
     }
 }
 @media screen and (min-width: 1920px) {
     .hero{
-        background-image: url('../public/hero2400.jpg');
+        background-image: url('https://drive.google.com/uc?export=view&id=18HZ9cDfGXCjajTeIz00OlpYOZk3iKOmC');
     }
 }
