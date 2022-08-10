@@ -8,7 +8,6 @@ import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import Course from '../components/course'
 import Pricing from '../components/Pricing'
-import Testimonials from '../components/Testimonials'
 
 
 interface propType{
@@ -44,7 +43,6 @@ const Home: NextPage<propType> = ({courses}) => {
             </Box>
         </Container>
         <Pricing/>
-        <Testimonials/>
         <Footer/>
       </ThemeProvider>
     </div>
