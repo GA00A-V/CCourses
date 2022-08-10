@@ -1,7 +1,6 @@
 import { AppBar, Button, Container, Drawer, IconButton, ListItem, Box, Toolbar, Dialog, DialogTitle, DialogContent, DialogContentText, TextField, DialogActions } from '@mui/material'
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../c.png'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -53,7 +52,7 @@ const Header = () => {
         <Container maxWidth="xl">
             <Toolbar sx={{justifyContent:"space-between"}}>
                 <div style={{display:'flex', alignItems:'center', cursor:'pointer'}}>
-                    <Image height={25} width={25} src={logo} />
+                    <Image height={25} width={25} src='/logo.png' />
                   <Link href='//'>
                     <span style={{color:"#2f3640", marginLeft:'5px', fontSize:'large'}}>CCourses</span>
                   </Link>

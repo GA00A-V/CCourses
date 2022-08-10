@@ -8,10 +8,11 @@ import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import Course from '../components/course'
 import Pricing from '../components/Pricing'
+import { StaticImageData } from 'next/image'
 
 
 interface propType{
-  courses: {title:string, price:'string', id:number}[]
+  courses: {title:string, price:'string', id:number, image:string}[]
 }
 
 
@@ -38,7 +39,7 @@ const Home: NextPage<propType> = ({courses}) => {
             </Divider>
             <Box sx={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
                 {
-                  courses.map(course=>(<Course title={course.title} price={course.price} key={course.id} id={course.id} />))
+                  courses.map(course=>(<Course title={course.title} price={course.price} key={course.id} image={course.image} />))
                 }
             </Box>
         </Container>

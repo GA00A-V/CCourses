@@ -16,7 +16,7 @@ const Pricing = () => {
                         <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />Unlimited hours of study.</Typography>
                         <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />Unlimited access to all courses.</Typography>
                     </Box>
-                    <Button size="large" variant="outlined" sx={{marginTop:'50px', width:'200px'}}>Buy Now</Button>
+                    <Button size="large" variant="outlined" sx={{marginTop:'50px', width:'200px'}}>Get Started</Button>
                 </Card>
 
 
