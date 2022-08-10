@@ -1,29 +1,55 @@
-import { Box, Button, Container, Typography } from "@mui/material"
-import { NextPage } from "next"
+import { Box, Button, Card, Container, Typography } from "@mui/material"
+import DoneIcon from '@mui/icons-material/Done';
 
-const Hero: NextPage = () => {
+const Pricing = () => {
     return (
-        <Container sx={{textAlign:'center'}}>
-            <Typography sx={{fontWeight:'700', fontSize:{xs:"32px", md:'56px'}, lineHeight:{xs:"42px", md:'70px'}}}>
-                Learn in-demand skills.
-            </Typography>
-            <Typography color={'primary'} sx={{fontWeight:'700',mb:"20px", fontSize:{xs:"32px", md:'56px'}, lineHeight:{xs:"42px", md:'70px'}}}>
-                Build your career.
-            </Typography>
-            <Typography variant='subtitle1' sx={{mt:{xs:"20px", md:"35px"},color:'rgb(55, 63, 73)',fontSize:{xs:"15px", md:'20px'},lineHeight:{xs:"20px",md:"30px"},  fontWeight:'300', mb:1}}>
-                The most efficient and supportive way for you to learn in-demand skills, get hired, and advance your career.
-            </Typography>
-            <Box sx={{mt:{xs:"30px",md:"35px"}}}>
-                <Button color="primary" variant="contained" sx={{borderRadius:'50px', mr:"8px"}}>
-                    JOIN US
-                </Button>
-                <Button color="primary" variant="outlined" sx={{borderRadius:'50px', ml:'8px'}}>
-                    View Courses
-                </Button>
-            </Box>
+        <div id='pricing' style={{paddingBottom:'3.5em',paddingTop:'1em', backgroundColor:'rgb(156 136 255 / 5%)    '}}>
+            <Typography color="GrayText" sx={{color:"#353b48",textAlign:"center", marginBottom:'2em'}} variant="h4">Choose a Plan</Typography>
+            <Container maxWidth="xl" sx={{display:{md:'flex'}, marginY:'2em', justifyContent:'center', alignItems:'center'}}>
+                <Card elevation={4} sx={{textAlign:"center",marginX:{xs:'auto', md:'4px'}, marginY:'12px', padding:'2em', height:'410px', width:'330px', borderRadius:'15px'}}>
+                    <Typography variant='h6' sx={{marginBottom:"1em"}}>Free</Typography>
+                    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'1em'}}>
+                        <Typography variant='h3' sx={{fontWeight:'500', display:'inline', marginRight:'8px'}}><span style={{fontSize:'18px'}} >$</span>0</Typography> 
+                        <Typography variant='h5' color={'text.secondary"'} sx={{display:'inline'}}>/mon.</Typography>
+                    </Box>
+                    <Box sx={{marginTop:'3em', marginBottom:'2em'}}>
+                        <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />Unlimited hours of study.</Typography>
+                        <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />Unlimited access to all courses.</Typography>
+                    </Box>
+                    <Button size="large" variant="outlined" sx={{marginTop:'50px', width:'200px'}}>Buy Now</Button>
+                </Card>
 
-        </Container>
+
+                <Card elevation={4} sx={{textAlign:"center",marginX:{xs:'auto', md:'4px'}, marginY:'12px', padding:'0 2em 2em 2em', height:'450px', width:'330px', borderRadius:'15px'}}>
+                    <Typography variant='subtitle1' sx={{marginBottom:"1em", backgroundColor:'#8c7ae6', width:'fit-content', marginX:'auto', padding:'8px 8px 18px 8px', color:'white',clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 79%, 0 100%)'}}>Most Popular</Typography>
+                    <Typography variant='h6' sx={{marginBottom:"1em"}}>Standard</Typography>
+                    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'1em'}}>
+                        <Typography variant='h3' sx={{fontWeight:'500', display:'inline', marginRight:'8px'}}><span style={{fontSize:'18px'}} >$</span>49.99</Typography> 
+                        <Typography variant='h5' color={'text.secondary"'} sx={{display:'inline'}}>/mon.</Typography>
+                    </Box>
+                    <Box sx={{marginTop:'3em', marginBottom:'2em'}}>
+                        <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />Everything in free version.</Typography>
+                        <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />Email support.</Typography>
+                    </Box>
+                    <Button size="large" variant="contained" sx={{marginTop:'55px', width:'200px'}}>Buy Now</Button>
+                </Card>
+
+
+                <Card elevation={4} sx={{textAlign:"center",marginX:{xs:'auto', md:'4px'}, marginY:'12px', padding:'2em', height:'410px', width:'330px', borderRadius:'15px'}}>
+                    <Typography variant='h6' sx={{marginBottom:"1em"}}>Premium</Typography>
+                    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'1em'}}>
+                        <Typography variant='h3' sx={{fontWeight:'500', display:'inline', marginRight:'8px'}}><span style={{fontSize:'18px'}} >$</span>99.99</Typography> 
+                        <Typography variant='h5' color={'text.secondary"'} sx={{display:'inline'}}>/mon.</Typography>
+                    </Box>
+                    <Box sx={{marginTop:'3em', marginBottom:'2em'}}>
+                        <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />Everything in standard version.</Typography>
+                        <Typography sx={{marginY:'8px',display:'flex', justifyContent:'center', alignItems:'center'}}><DoneIcon sx={{marginRight:'8px'}} />24/7 customer support.</Typography>
+                    </Box>
+                    <Button size="large" variant="outlined" sx={{marginTop:'50px', width:'200px'}}>Buy Now</Button>
+                </Card>
+            </Container>
+        </div>
     );
 }
 
-export default Hero;
+export default Pricing;

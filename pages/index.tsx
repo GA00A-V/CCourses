@@ -7,10 +7,12 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import Course from '../components/course'
+import Pricing from '../components/Pricing'
+import Testimonials from '../components/Testimonials'
 
 
 interface propType{
-  courses: {title:string, price:'string'}[]
+  courses: {title:string, price:'string', id:number}[]
 }
 
 
@@ -31,16 +33,18 @@ const Home: NextPage<propType> = ({courses}) => {
         </Head>
         <Header/>
         <Hero />
-        <Container id='courses' sx={{textAlign:'center', paddingBottom:'1em', marginBottom:"3em"}}>
+        <Container maxWidth="xl" id='courses' sx={{textAlign:'center', paddingBottom:'1em', marginBottom:"3em"}}>
             <Divider sx={{width:{md:'40%'}, textAlign:"center", margin:'auto'}}>
                 <Typography sx={{marginY:"1em", color:"#353b48"}} variant="h4">Our Courses</Typography>
             </Divider>
             <Box sx={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
                 {
-                  courses.map(course=>(<Course title={course.title} price={course.price} key={Math.random()} />))
+                  courses.map(course=>(<Course title={course.title} price={course.price} key={course.id} id={course.id} />))
                 }
             </Box>
         </Container>
+        <Pricing/>
+        <Testimonials/>
         <Footer/>
       </ThemeProvider>
     </div>
