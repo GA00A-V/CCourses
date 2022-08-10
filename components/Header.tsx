@@ -72,7 +72,7 @@ const Header = () => {
         <Container maxWidth="xl">
             <Toolbar sx={{justifyContent:"space-between"}}>
                 <div style={{display:'flex', alignItems:'center', cursor:'pointer'}}>
-                    <Image height={25} width={25} src='https://drive.google.com/uc?export=view&id=1tyUy_N43VKmtJ7YPZ1cM8fq2wkEMMQsm' />
+                    <Image height={25} width={25} src='https://drive.google.com/uc?export=view&id=1tyUy_N43VKmtJ7YPZ1cM8fq2wkEMMQsm' alt="data"/>
                   <Link href='/'>
                     <span style={{color:"#2f3640", marginLeft:'5px', fontSize:'large'}}>CCourses</span>
                   </Link>
